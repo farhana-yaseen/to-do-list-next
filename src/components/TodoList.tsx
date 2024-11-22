@@ -77,17 +77,17 @@ const TodoList = () => {
             {/* input field */}
             <div className="flex space-x-5 ">
 
-                <input name="todo" type="text" placeholder="What do you want to do?" value={todo} onChange={(e) => setTodo(e.target.value)} required className="bg-white text-base lg:text-xl xl:text-2xl 2xl:text-3xl text-black w-64 h-10 lg:w-[450px] lg:h-12 xl:w-[450px] xl:h-16 2xl:w-[550px] rounded-md" />
+                <input name="todo" type="text" placeholder="What do you want to do?" value={todo} onChange={(e) => setTodo(e.target.value)} required className="bg-white text-base lg:text-xl xl:text-2xl 2xl:text-3xl text-black w-52 h-10 lg:w-[450px] lg:h-12 xl:w-[450px] xl:h-16 2xl:w-[550px] rounded-md" />
                 <button onClick={handleAddTodo}
                 disabled={todo.trim() === ""} // Disable button if input is empty 
-                 className="bg-white font-bold text-black w-28 text-lg lg:text-xl 2xl:text-2xl lg:w-40 2xl:w-48 rounded-md">Add Task</button>
+                 className="bg-white font-bold text-black w-24 text-base g:text-xl 2xl:text-2xl lg:w-40 2xl:w-48 rounded-md">Add Task</button>
             </div>
             </form>
 
 
             {/* Display Area */}
                                                                                                                             {/* overflow ensures that the list will only scroll vertically (if the content exceeds the available space) instead of expanding the container. */}
-            <div className="bg-black shadow-lg shadow-white w-[400px] lg:w-[650px] h-full xl:w-[700px] 2xl:w-[800px] my-10 overflow-auto max-h-[60vh] "> {/*The max-h-[60vh] ensures that the display area will not exceed 60% of the height of the user's screen */}
+            <div className="bg-black shadow-lg shadow-white w-[350px] lg:w-[650px] h-full xl:w-[700px] 2xl:w-[800px] my-10 overflow-auto max-h-[60vh] "> {/*The max-h-[60vh] ensures that the display area will not exceed 60% of the height of the user's screen */}
                 <div className="my-5 ">
                     <h2 className="text-center font-extrabold text-xl md:text-4xl 2xl:text-7xl lg:text-5xl underline">Todo List</h2>
 
@@ -96,7 +96,7 @@ const TodoList = () => {
                             {
                                 todoList.map((list, i) => {
                                     return (
-                                        <li key={i} className="flex justify-between items-center w-[400px] lg:w-[550px] xl:w-[600px] 2xl:w-[700px] ">
+                                        <li key={i} className="flex justify-between items-center w-[300px] lg:w-[550px] xl:w-[600px] 2xl:w-[700px] ">
                                             {editIndex === i ? (
                                                     <input
                                                         type="text"
@@ -106,7 +106,7 @@ const TodoList = () => {
 
                                                         className="bg-white text-black rounded-md w-full"
                                                     />
-                                                ) : ( <div className="mb-3 lg:mb-5 inline-block w-[250px] lg:w-[350px] xl:w-[450px] ">{list}</div>)
+                                                ) : ( <div className="mb-3 lg:mb-5 inline-block w-[200px] lg:w-[350px] xl:w-[450px] ">{list}</div>)
                                             }
                                            
                                            {/* Delete icon */}
