@@ -77,10 +77,10 @@ const TodoList = () => {
             {/* input field */}
             <div className="flex space-x-5 ">
 
-                <input name="todo" type="text" placeholder="What do you want to do?" value={todo} onChange={(e) => setTodo(e.target.value)} required className="bg-white text-base lg:text-xl xl:text-2xl 2xl:text-3xl text-black w-64 h-10 lg:w-[450px] lg:h-12 xl:w-[450px]  xl:h-16 rounded-md" />
+                <input name="todo" type="text" placeholder="What do you want to do?" value={todo} onChange={(e) => setTodo(e.target.value)} required className="bg-white text-base lg:text-xl xl:text-2xl 2xl:text-3xl text-black w-64 h-10 lg:w-[450px] lg:h-12 xl:w-[450px] xl:h-16 2xl:w-[550px] rounded-md" />
                 <button onClick={handleAddTodo}
                 disabled={todo.trim() === ""} // Disable button if input is empty 
-                 className="bg-white font-bold text-black w-28 text-lg lg:text-xl lg:w-40 rounded-md">Add Task</button>
+                 className="bg-white font-bold text-black w-28 text-lg lg:text-xl 2xl:text-2xl lg:w-40 2xl:w-48 rounded-md">Add Task</button>
             </div>
             </form>
 
@@ -96,7 +96,7 @@ const TodoList = () => {
                             {
                                 todoList.map((list, i) => {
                                     return (
-                                        <li key={i} className="flex justify-between items-center w-[400px] lg:w-[550px] xl:w-[600px]  ">
+                                        <li key={i} className="flex justify-between items-center w-[400px] lg:w-[550px] xl:w-[600px] 2xl:w-[700px] ">
                                             {editIndex === i ? (
                                                     <input
                                                         type="text"
